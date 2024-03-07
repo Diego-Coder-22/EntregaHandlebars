@@ -36,9 +36,9 @@ viewRouter.post("/realtimeproducts/addProduct", imgUpload.single("image"), (req,
         let productos = JSON.parse(rawData);
 
         // Obtener los datos del producto del cuerpo de la solicitud
-        const { title, description, price, stock, category } = req.body;
+        const { title, description, price, code, stock, category } = req.body;
         
-        console.log("Datos del producto recibidos:", title, description, price, stock, category);
+        console.log("Datos del producto recibidos:", title, description, price, code, stock, category);
         console.log("Archivo de imagen recibido:", req.file);
 
         const imageName = req.file ? req.file.filename : null;
